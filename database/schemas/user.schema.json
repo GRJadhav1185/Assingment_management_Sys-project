@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "User",
+    "description": "User entity representing students and faculty",
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string",
+            "format": "object-id",
+            "description": "Unique identifier for the user"
+        },
+        "name": {
+            "type": "string",
+            "description": "Full name of the user"
+        },
+        "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Email address of the user (unique)"
+        },
+        "password": {
+            "type": "string",
+            "description": "Hashed password"
+        },
+        "role": {
+            "type": "string",
+            "enum": [
+                "STUDENT",
+                "FACULTY"
+            ],
+            "default": "STUDENT",
+            "description": "Role of the user in the system"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of creation"
+        },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of last update"
+        }
+    },
+    "required": [
+        "name",
+        "email",
+        "password",
+        "role"
+    ]
+}

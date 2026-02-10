@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Submission",
+    "description": "Submission entity created by students",
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string",
+            "format": "object-id",
+            "description": "Unique identifier for the submission"
+        },
+        "assignmentId": {
+            "type": "string",
+            "format": "object-id",
+            "description": "Reference to the Assignment being submitted"
+        },
+        "studentId": {
+            "type": "string",
+            "format": "object-id",
+            "description": "Reference to the User (Student) who submitted"
+        },
+        "filePath": {
+            "type": "string",
+            "description": "Path to the uploaded file on the server"
+        },
+        "plagiarismScore": {
+            "type": "number",
+            "description": "Percentage score of plagiarism (0-100)"
+        },
+        "grade": {
+            "type": "number",
+            "description": "Grade assigned by faculty"
+        },
+        "feedback": {
+            "type": "string",
+            "description": "Feedback provided by faculty"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "ON_TIME",
+                "LATE"
+            ],
+            "description": "Submission status relative to due date"
+        },
+        "submittedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of submission"
+        },
+        "gradedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of grading"
+        }
+    },
+    "required": [
+        "assignmentId",
+        "studentId",
+        "filePath",
+        "status"
+    ]
+}

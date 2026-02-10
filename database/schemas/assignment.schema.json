@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Assignment",
+    "description": "Assignment entity created by faculty",
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string",
+            "format": "object-id",
+            "description": "Unique identifier for the assignment"
+        },
+        "title": {
+            "type": "string",
+            "description": "Title of the assignment"
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed instructions for the assignment"
+        },
+        "courseCode": {
+            "type": "string",
+            "description": "Course code associated with the assignment (e.g., CS101)"
+        },
+        "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Submission deadline"
+        },
+        "facultyId": {
+            "type": "string",
+            "format": "object-id",
+            "description": "Reference to the User (Faculty) who created the assignment"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of creation"
+        },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of last update"
+        }
+    },
+    "required": [
+        "title",
+        "description",
+        "courseCode",
+        "dueDate",
+        "facultyId"
+    ]
+}
