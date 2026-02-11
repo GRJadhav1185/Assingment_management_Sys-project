@@ -57,7 +57,7 @@ const AssignmentSubmit = () => {
         <ArrowLeft className="w-4 h-4 mr-2" /> Back to Dashboard
       </button>
 
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">{assignment.title}</h1>
         <div className="flex items-center space-x-2 text-sm text-gray-500 mb-6">
           <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-2 py-0.5 rounded">

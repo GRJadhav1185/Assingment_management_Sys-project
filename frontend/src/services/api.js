@@ -1,18 +1,30 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: "https://assingment-management-sys-project.onrender.com/api",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
 // Add a request interceptor
 api.interceptors.request.use(
   (config) => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (user && user.token) {
-      config.headers.Authorization = `Bearer ${user.token}`;
+    // Ensure headers object exists
+    if (!config.headers) {
+      config.headers = {};
+    }
+
+    const userString = localStorage.getItem('user');
+    if (userString) {
+      try {
+        const user = JSON.parse(userString);
+        if (user && user.token) {
+          config.headers.Authorization = `Bearer ${user.token}`;
+        }
+      } catch (error) {
+        console.error("Error parsing user data from localStorage:", error);
+      }
     }
     return config;
   },

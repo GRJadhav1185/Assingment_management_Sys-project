@@ -46,7 +46,7 @@ const Login = () => {
         <ThemeToggle />
       </div>
 
-      <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden p-8 space-y-6">
+      <div className="w-11/12 max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden p-6 md:p-8 space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             {isRegister ? 'Create Account' : 'Welcome Back'}

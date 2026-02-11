@@ -78,12 +78,12 @@ const Submissions = () => {
           <table className="w-full text-left">
             <thead className="bg-gray-50 dark:bg-gray-700/50 text-gray-600 dark:text-gray-300 uppercase text-xs font-semibold">
               <tr>
-                <th className="px-6 py-4">Student</th>
-                <th className="px-6 py-4">Submitted At</th>
-                <th className="px-6 py-4">Status</th>
-                <th className="px-6 py-4">Plagiarism</th>
-                <th className="px-6 py-4">Grade</th>
-                <th className="px-6 py-4">Actions</th>
+                <th className="px-4 md:px-6 py-4">Student</th>
+                <th className="px-4 md:px-6 py-4">Submitted At</th>
+                <th className="px-4 md:px-6 py-4">Status</th>
+                <th className="px-4 md:px-6 py-4">Plagiarism</th>
+                <th className="px-4 md:px-6 py-4">Grade</th>
+                <th className="px-4 md:px-6 py-4">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 dark:divide-gray-700">
@@ -98,8 +98,8 @@ const Submissions = () => {
                   </td>
                   <td className="px-6 py-4">
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${sub.status === 'ON_TIME'
-                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'
-                        : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'
+                      ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'
+                      : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'
                       }`}>
                       {sub.status.replace('_', ' ')}
                     </span>

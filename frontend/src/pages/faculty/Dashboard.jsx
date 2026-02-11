@@ -10,11 +10,11 @@ const FacultyDashboard = () => {
 
   return (
     <div className="space-y-8">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white">Faculty Dashboard</h1>
         <Link
           to="/faculty/assignments"
-          className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md"
+          className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md w-full md:w-auto justify-center"
         >
           <PlusCircle className="w-5 h-5 mr-2" /> Create Assignment
         </Link>
